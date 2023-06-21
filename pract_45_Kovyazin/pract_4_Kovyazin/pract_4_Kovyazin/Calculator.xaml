@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pract_4_Kovyazin.Calculator"
+              Title="Кредитный калькулятор"
+              BackgroundColor="PaleGoldenrod">
+    <ContentPage.Resources>
+        <StyleSheet Source="/style.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Сумма кредита:" StyleClass="labeltext" VerticalOptions="Start" HorizontalOptions="Start" Margin="15"/>
+                <Entry x:Name ="LoanEntry" StyleClass="logpass" Placeholder="Введите сумму кредита" VerticalOptions="Start" HorizontalOptions="Start"  Margin="20"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Срок (месяцев):" StyleClass="labeltext" VerticalOptions="Start" HorizontalOptions="Start" Margin="15"/>
+                <Entry x:Name ="MonthEntry"  StyleClass="logpass" Placeholder="Введите срок в месяцах" VerticalOptions="Start" HorizontalOptions="Start" Margin="20"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Вид платежа:" StyleClass="labeltext" VerticalOptions="Start" HorizontalOptions="Start" Margin="15"/>
+                <Picker x:Name="PaymentTypePicker"  Title="Выберите вид платежа" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Margin="20"  SelectedIndex="0">
+                    <Picker.Items>
+                        <x:String>Аннуитетный</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Процентная ставка:" StyleClass="labeltext" VerticalOptions="Start" HorizontalOptions="Start"  Margin="15"/>
+                <Slider x:Name="Slider"   ValueChanged="SliderValueChange"  Minimum="0" Maximum="100"  Value="5"/>
+                <Label x:Name="SliderLabel" Text="5%"  Margin="20,0,20,0" VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label x:Name="MonthlyPaymentLabel" StyleClass="labeltext" Text="Ежемесячный платеж:" VerticalOptions="Center"   Margin="15"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label x:Name="TotalLabel" StyleClass="labeltext" Text="Общая сумма:" VerticalOptions="Center" Margin="15"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label x:Name="OverpaymentLabel" StyleClass="labeltext" Text="Переплата:" VerticalOptions="Center"  Margin="15"/>
+            </StackLayout>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

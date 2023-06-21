@@ -1,0 +1,42 @@
+﻿^contentpage {
+    background-color: #2F2F2F;
+}
+.welclabel {
+    font-style:bold;
+    color:white;
+}
+.logpass {
+    color: black;
+    background-color: blanchedalmond;
+    font-style: bold;
+    font-family: Arial;
+    
+}
+button {
+    background-color: red;
+}
+.checkbox {
+    color: white;
+}
+label {
+    font-size: small;
+    color: white;
+    
+   
+    
+}
+.labelIforgot {
+    text-decoration: underline;
+    color: white;
+}
+
+.labeltext{
+    font-size: small;
+    color: black;
+}
+
+.eurusd {
+    font-size: large;
+    color: black;
+    text-decoration: underline;
+}

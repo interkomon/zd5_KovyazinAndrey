@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pract_4_Kovyazin.CurrencyExchanger"
+             Title="Курсы валют"
+             BackgroundColor="PaleGoldenrod">
+    <ContentPage.Resources>
+        <StyleSheet Source="/style.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+
+
+        <StackLayout Orientation="Horizontal">
+
+            <StackLayout Orientation="Vertical">
+
+                <Label Text="Центробанк РФ:" StyleClass="labeltext" Margin="10" FontSize="15"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="USD" StyleClass="eurusd"  Margin="10"/>
+                    <Entry x:Name="usdEntry" StyleClass="logpass" Placeholder="Введите курс доллара" TextChanged="usdEntry_TextChanged"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="EUR" StyleClass="eurusd" Margin="10"/>
+                    <Label x:Name="eurLabel" StyleClass="labeltext" Text="91.99"  Margin="10" FontSize="23" TextDecorations="None" />
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical">
+                <Label Text="Текущая дата:" StyleClass="labeltext" Margin="10" TextDecorations="Underline" FontAttributes="Bold" />
+                <DatePicker  StyleClass="eurusd" Margin="5"/>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
